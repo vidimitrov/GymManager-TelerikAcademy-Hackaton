@@ -26,20 +26,37 @@
     <script src="js/app.js"></script>
 </head>
 <body ng-app="sampleApp" ng-controller="NerdController">
-<div class="main-header navbar navbar-default">
-    <div class="main-header navbar navbar-default">
+<div class="navbar navbar-default" id="main-header">
+    <div class="navbar navbar-default">
         <div class="navbar-header">
-            <a class="navbar-brand" href="#">Admin user</a>
+            <a class="navbar-brand" href="#">
+                <img src="./imgs/Admin.jpg" alt="admin-icon" width="20px" height="20px">
+                Admin user
+            </a>
         </div>
         <ul class="nav navbar-nav navbar-right">
-            <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">Log out <b class="caret"></b></a></li>
+            <li>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Log out <b class="caret"></b></a>
+            </li>
         </ul>
     </div>
 </div>
-<div class="admin-nav-panel navbar navbar-default row">
-    <button type="button" class="admin-nav-btn btn btn-primary col-md-1">Clients</button>
-    <button type="button" class="admin-nav-btn btn btn-primary btn-lg col-md-1">Home</button>
-    <button type="button" class="admin-nav-btn btn btn-primary col-md-1">Employees</button>
+
+<div id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+        <li class="sidebar-brand">
+            <img src="./imgs/Users.png" alt="clients-icon" width="20px" height="20px">
+            <button type="button" class="btn btn-primary">Clients</button>
+        </li>
+        <li>
+            <img src="./imgs/Home.png" alt="home-icon" width="20px" height="20px">
+            <button type="button" class="btn btn-primary btn-lg">Home</button>
+        </li>
+        <li>
+            <img src="./imgs/Employees.png" alt="clients-icon" width="20px" height="20px">
+            <button type="button" class="btn btn-primary">Employees</button>
+        </li>
+    </ul>
 </div>
 
 <div class="panels-container">
@@ -74,5 +91,6 @@
         </div>
     </div>
 </div>
+
 </body>
 </html>
