@@ -10,9 +10,15 @@ var app = express();
 	
 // config files
 var db = require('./config/db');
-mongoose.connect(db.url);
+mongoose.connect(db.local);
 
-var port = process.env.PORT || 8080; // set our port
+var connection = mongoose.connection;
+connection.on('error', console.error.bind(console, 'connection error:'));
+connection.once('open', function callback(){
+   console.log('DB connection opened!');
+});
+
+var port = process.env.PORT || 8080;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
@@ -20,11 +26,11 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // routes ==================================================
-require('./app/routes')(app); // pass our application into our routes
+require('./app/routes')(app);
 
 // start app ===============================================
 app.listen(port);
 
-console.log('Magic happens on port ' + port); 			// shoutout to the user
+console.log('Magic happens on port ' + port);
 
-exports = module.exports = app; 						// expose app
+exports = module.exports = app;
