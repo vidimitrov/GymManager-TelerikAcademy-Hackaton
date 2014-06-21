@@ -2,7 +2,9 @@
   "name": "starter-node-angular",
   "main": "server.js",
   "dependencies": {
-    "express": "~3.4.8",
-    "mongoose": "~3.6.13"
+    "express": "~4.2.0",
+    "mongoose": "~3.6.13",
+    "cookie-parser": "~1.0.1",
+    "body-parser": "~1.0.0"
   }
 }

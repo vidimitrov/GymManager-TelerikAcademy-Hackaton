@@ -1,3 +1,3 @@
 module.exports = {
-	url : 'mongodb://<user>:<pass>@mongo.onmodulus.net:27017/uw45mypu'
+	url : 'mongodb://admin:admin@kahana.mongohq.com:10054/CreativeMintzProjectDB'
 }
