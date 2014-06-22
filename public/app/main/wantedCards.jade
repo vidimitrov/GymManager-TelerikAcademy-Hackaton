@@ -1,0 +1,7 @@
+div.client-card-small(ng-repeat="card in cards | filter: search")
+    img.client-card-photo(src='{{card.photo}}')
+    div.client-card-info
+        a(href="partials/main/{{card._id}}") 
+            strong {{card.name}}
+        br  
+        span {{card.email}}

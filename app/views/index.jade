@@ -1,0 +1,44 @@
+doctype
+html(lang='en')
+head
+    base(href='/')
+    title {{title}}
+    link(rel='stylesheet', href='./libs/bootstrap/dist/css/bootstrap.min.css')
+    link(rel='stylesheet', href='./css/bootstrap.min.css')
+    link(rel='stylesheet', href='./css/style.css')
+  body(ng-app='gymManagerApp' ng-controller='MainCtrl')
+    #main-header.navbar.navbar-default
+      .navbar.navbar-default
+        .navbar-header
+          a.navbar-brand(href='#')
+            img(src='./imgs/Admin.jpg', alt='admin-icon', width='20px', height='20px')
+            | {{admin}}
+        ul.nav.navbar-nav.navbar-right
+          li
+            a.dropdown-toggle(href='#', data-toggle='dropdown')
+              | Log out
+              b.caret
+    #sidebar-wrapper
+      ul.sidebar-nav
+        li.sidebar-brand
+          img(src='./imgs/Users.png', alt='clients-icon', width='30px', height='30px')
+          a(href='#/clientCards') 
+            button.btn.btn-primary(type='button') Clients
+        li(style="padding-left: 10px")
+          img(src='./imgs/Home.png', alt='home-icon', width='40px', height='40px')
+          a(href='#/')
+            button.btn.btn-primary.btn-lg(type='button') Home
+        li
+          img(src='./imgs/Employees.png', alt='clients-icon', width='30px', height='30px')
+          button.btn.btn-primary(type='button') Employees
+    div(ng-view='ng-view')
+    
+    script(src='libs/angular/angular.js')
+    script(src='libs/angular-route/angular-route.js')
+    script(src="libs/angular-resource/angular-resource.js")
+    script(src='app/app.js')
+    script(src='app/main/MainCtrl.js')
+    script(src='app/main/HomeCtrl.js')
+    script(src='app/main/CardsResource.js')
+    script(src='app/clientCards/CardsCtrl.js')
+    //Add all the controllers

@@ -7,7 +7,8 @@ var ClientCardSchema = new Schema({
     email: String,
     photo: String,
     creationDate: String, //Date,
-    expiringDate: String, //Date,
+    lastUpdate: String, //Date,
+    paidPeriod: Number, //Number of paid days 
     gym: {type: Schema.Types.ObjectId, ref: 'Gym'}
 });
 

@@ -20,6 +20,8 @@ connection.once('open', function callback(){
 
 var port = process.env.PORT || 8080;
 
+app.set('view engine', 'jade');
+app.set('views', __dirname + '/app/views');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
 app.use(cookieParser());

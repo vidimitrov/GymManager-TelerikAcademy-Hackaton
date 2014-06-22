@@ -64,6 +64,10 @@ module.exports = function(app) {
         
         clientCard.name = req.body.name;
         clientCard.email = req.body.email;
+        clientCard.photo = req.body.photo;
+        clientCard.creationDate = req.body.creationDate;
+        clientCard.lastUpdate = req.body.lastUpdate;
+        clientCard.paidPeriod = req.body.paidPeriod;
         
         clientCard.save(function(err){
             if(err) console.log('Cannot save the client card! ', err);
@@ -83,11 +87,16 @@ module.exports = function(app) {
             res.send(card);
         });
     });
+    
+    //Partial views
+    app.get('/partials/:partialArea/:partialName', function(req, res) {
+        res.render('../../public/app/' + req.params.partialArea + '/' + req.params.partialName);
+    });
 
 	// frontend routes =========================================================
     
 	app.get('*', function(req, res) {
-		res.sendfile('./public/index.html');
+		res.render('index', { title: 'Gym Manager' });
 	});
 
 };

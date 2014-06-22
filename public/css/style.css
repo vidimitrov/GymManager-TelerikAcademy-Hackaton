@@ -22,13 +22,13 @@ a.dropdown-toggle {
 
 /*general view panels*/
 div.panels-container {
-    margin-top: 50px;
-    margin-left: 20%;
+    margin-top: 25px;
+    margin-left: 18%;
 }
 
 div.panels-container > div {
-    width: 23%;
-    margin-right: 10%;
+    width: 28%;
+    margin-right: 5%;
     display: inline-block;
 }
 
@@ -61,4 +61,47 @@ div.panels-container > .search-filter {
     height: 65px;
     margin-bottom: 5px;
     text-align: left;
+}
+
+.client-card-small{
+    margin-top: 5px;
+}
+
+.client-card-small img{
+    float: left;
+}
+
+.client-card-small div{
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.client-card-small:after{
+    display: block;
+    content: '';
+    clear: both;
+}
+
+.client-cards-table{
+    margin-top: 25px;
+    margin-left: 16%;
+}
+
+.client-cards-table tr td:nth-child(1){
+    width: 5%;
+}
+.client-cards-table tr td:nth-child(2){
+    width: 20%;
+}
+.client-cards-table tr td:nth-child(3){
+    width: 20%;
+}
+.client-cards-table tr td:nth-child(4){    
+    width: 20%;
+}
+
+#clientCardSearch{
+    width: 250px;
+    margin-top: 30px;
+    margin-left: 17%;
 }

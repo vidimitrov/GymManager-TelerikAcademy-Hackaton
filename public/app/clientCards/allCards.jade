@@ -1,0 +1,20 @@
+input.form-control(type="text", id="clientCardSearch", ng-model="search", placeholder="Search client card...")
+table.table.table-striped.table-hover.client-cards-table
+    
+    thead
+        tr
+          th 
+          th Name
+          th Email
+          th Card expiring
+          th Last update
+    tbody
+        tr(ng-repeat="card in cards | filter: search")
+          td 
+            img(src="{{card.photo}}")
+          td {{card.name}}
+          td {{card.email}}
+          td 
+            .progress.progress-striped.success
+                .progress-bar(style='width: {{calculateProgress(card)}}%;')
+          td {{card.lastUpdate}}

@@ -1,0 +1,15 @@
+.panels-container
+    .search-filter.form-group
+        input.form-control(type='text', placeholder='Search card', ng-model="search")
+      .panel.panel-success
+        .panel-heading
+          h3.panel-title Tomorrow
+        .panel-body(ng-include="'/partials/main/tomorrowExpCards'")
+      .panel.panel-warning
+        .panel-heading
+          h3.panel-title Today
+        .panel-body(ng-include="'/partials/main/todayExpCards'")
+      .panel.panel-danger
+        .panel-heading
+          h3.panel-title Wanted
+        .panel-body(ng-include="'/partials/main/wantedCards'")
