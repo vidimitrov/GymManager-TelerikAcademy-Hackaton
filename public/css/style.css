@@ -100,8 +100,52 @@ div.panels-container > .search-filter {
     width: 20%;
 }
 
-#clientCardSearch{
-    width: 250px;
+.cards-toolbar{
     margin-top: 30px;
     margin-left: 17%;
+}
+
+.cards-toolbar input{
+    width: 250px;
+}
+
+.cards-toolbar button{
+    margin-right: 27px;
+}
+
+.client-card-details{
+    margin-top: 25px;
+    margin-left: 17%;
+    width: 80%;
+}
+
+.client-card-details img{
+    width: 250px;
+    float: left;
+}
+
+.client-card-details h4{
+    color: #2FC7CE;
+}
+
+.client-card-details .progress.progress-striped{
+    background-color: white;
+}
+
+.form-holder{
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.panel-body{
+    float: left;
+    overflow: auto;
+}
+
+.buttons button{
+    margin-left: 10px;
+}
+
+.btn-default{
+    background-color: #2c3e50;
 }

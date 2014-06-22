@@ -1,4 +1,4 @@
-var app = angular.module('gymManagerApp', ['ngRoute', 'ngResource']);
+var app = angular.module('gymManagerApp', ['ngRoute', 'ngResource', 'clientCardsFilters']);
 
 app.config(function($routeProvider, $locationProvider) {
 
@@ -11,8 +11,8 @@ app.config(function($routeProvider, $locationProvider) {
             templateUrl: '/partials/clientCards/allCards',
             controller: 'CardsCtrl'
         })
-        //Today panel
-//        .when('', {
-//            
-//        });
+        .when('/clientCards/:id', {
+            templateUrl: '/partials/clientCards/cardById',
+            controller: 'CardDetailsCtrl'
+        });
 });

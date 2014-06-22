@@ -1,0 +1,28 @@
+div.jumbotron.client-card-details
+    h1.text-center {{card.name}}
+    h4.text-center client since {{card.creationDate}}
+    img(src="{{card.photo}}")
+    div.form-holder
+        form.form-horizontal
+            fieldset
+                legend Main information
+                .form-group
+                    label.col-lg-2.control-label(for='clientCardEmail') Name
+                    .col-lg-10
+                        input#clientCardName.form-control(type='text', value='{{card.name}}')
+                .form-group
+                    label.col-lg-2.control-label(for='clientCardEmail') Email
+                    .col-lg-10
+                        input#clientCardEmail.form-control(type='text', value='{{card.email}}')
+        strong Last update: 
+        span {{card.lastUpdate}}
+        br
+        br
+        strong Card expiring
+        .progress.progress-striped
+            .progress-bar.progress-bar-success(style='width: {{calculateProgress(card)}}%;')
+    div.buttons
+        button.btn.btn-info.pull-right(type='button') Update
+        button.btn.btn-danger.pull-right(type='button') Delete
+            
+            

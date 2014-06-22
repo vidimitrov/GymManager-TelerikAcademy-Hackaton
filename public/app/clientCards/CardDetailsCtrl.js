@@ -1,6 +1,11 @@
-app.controller('CardsCtrl', function($scope, CardsResource) {
-
-	$scope.cards = CardsResource.query();
+app.controller('CardDetailsCtrl', function($scope, $routeParams, CardsResource) {    
+	$scope.card = CardsResource.query().$promise.then(function(collection) {
+        collection.forEach(function(card) {
+            if (card._id === $routeParams.id) {
+                $scope.card = card;
+            }
+        })
+    })
     
     $scope.calculateProgress = function(card){
         var progress;
